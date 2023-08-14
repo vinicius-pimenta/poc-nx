@@ -1,9 +1,8 @@
 name: CI
 on:
-  push:
-    branches:
-      - vinicius-pimenta
-    pull_request:
+  pull_request:
+    branches: [main, develop]
+  workflow_dispatch:
 
 jobs:
   main:
@@ -13,7 +12,7 @@ jobs:
         with:
           fetch-depth: 0
       - uses: nrwl/nx-set-shas@v3
-      - run: npm i
+      - run: pnpm i
 
-      - run: npx nx affected -t test
+      - run: - run: yarn nx affected -t test --base=${{  github.base_ref }} --head=${{ github.head_ref }}
 
