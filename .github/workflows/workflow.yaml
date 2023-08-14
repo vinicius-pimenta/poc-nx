@@ -14,5 +14,5 @@ jobs:
       - uses: nrwl/nx-set-shas@v3
       - run: npm i
 
-      - run: npx nx affected -t test --base=${{  github.base_ref }} --head=${{ github.head_ref }}
+      - run: pnpm nx affected -t test --base=${{  github.base_ref }} --head=${{ github.head_ref }}
 
