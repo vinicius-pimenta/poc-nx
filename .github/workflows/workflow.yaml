@@ -12,6 +12,7 @@ jobs:
         with:
           fetch-depth: 0
       - uses: nrwl/nx-set-shas@v3
+      - uses: pnpm/action-setup@v2
       - run: pnpm i
 
       - run: pnpm nx affected -t test --base=${{  github.base_ref }} --head=${{ github.head_ref }}
