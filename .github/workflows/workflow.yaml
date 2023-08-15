@@ -14,7 +14,7 @@ jobs:
       - uses: nrwl/nx-set-shas@v3
       - run: npm i
 
-      - run: "git branch --track ${{github.base_ref}} origin/${{github.base_ref}}"
-      - run: "git branch --track ${{github.head_ref}} origin/${{github.head_ref}}"
-      - run: npx nx affected -t test --base=${{ github.base_ref }} --head=${{ github.head_ref }}
+      # - run: "git branch --track ${{github.base_ref}} origin/${{github.base_ref}}"
+      # - run: "git branch --track ${{github.head_ref}} origin/${{github.head_ref}}"
+      - run: npx nx affected -t test --base=${{ github.event.before }} --head=${{ github.sha }}
 
