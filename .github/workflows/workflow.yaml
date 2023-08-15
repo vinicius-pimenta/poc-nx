@@ -14,5 +14,5 @@ jobs:
       - uses: nrwl/nx-set-shas@v3
       - run: npm i
 
-      - run: npx nx affected -t test --base=6c7d90749e89e72ffd6731219461f7e73255246c --head=bc7c9ff24b42a3e5a717438bb2ce357c0119bb4b
+      - run: npx nx affected -t test --base=main --head=vinicius-pimenta
 
