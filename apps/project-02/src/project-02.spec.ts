@@ -1,4 +1,4 @@
-import { sum } from 'utils';
+import { sum } from "@shared/utils";
 
 describe('project-02', () => {
   it('should test project-02', async () => {

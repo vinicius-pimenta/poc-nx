@@ -1,4 +1,4 @@
-import { sum,sub, delay } from 'utils';
+import { delay, sub, sum } from "@shared/utils";
 
 describe('project-01', () => {
   it('should test project-01', async () => {
